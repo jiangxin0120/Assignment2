@@ -1,0 +1,22 @@
+
+use('Marketplace');
+
+db.createCollection("product")
+
+db.product.insert({
+    name: "Sample Product",
+    description: "This is a sample product description.",
+    price: 99.99,
+    quantity: 10,
+    category: "Electronics"
+})
+
+
+db.createCollection("categories")
+
+db.categories.insert({
+    name: "Electronics"
+})
+
+db.product.find().pretty()
+db.categories.find().pretty()
